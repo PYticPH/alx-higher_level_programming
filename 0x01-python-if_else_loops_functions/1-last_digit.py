@@ -12,4 +12,3 @@ elif lastNum * sign == 0:
 else:
     print(f"Last digit of {number}", end=" ")
     print(f"is {lastNum * sign} and is less than 6 and not 0")
-
