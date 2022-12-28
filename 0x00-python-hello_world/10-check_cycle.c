@@ -11,14 +11,16 @@
 int check_cycle(listint_t *list)
 {
     listint_t *temp;
+    unsigned int nodeCount = 0;
 
     temp = list;
     while (list != NULL)
     {
-	if (temp == list->next)
+	if (temp == list->next && nodeCount > 1)
 	    return (1);
 
 	list = list->next;
+	nodeCount++;
     }
 
     return (0);
