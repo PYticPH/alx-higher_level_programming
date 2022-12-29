@@ -10,17 +10,19 @@
 
 int check_cycle(listint_t *list)
 {
-    listint_t *temp;
+    listint_t *temp_x1, *temp_x2;
 
     if (list == NULL)
 	return (0);
 
-    temp = list->next;
-    while (temp != NULL)
+    temp_x1 = list;
+    temp_x2 = list;
+    while (temp_x2 != NULL && temp_x2->next != NULL)
     {
-	if (temp == list)
+	temp_x1 = temp_x1->next;
+	temp_x2 = temp_x2->next->next;
+	if (temp_x2 == temp_x1)
 	    return (1);
-	temp = temp->next;
     }
 
     return (0);
