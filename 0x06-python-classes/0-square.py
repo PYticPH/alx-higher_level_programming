@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 """ An empty class that defines a square """
-class Square:
-    pass
+if __name__ == "__main__":
+    class Square:
+        pass
