@@ -7,4 +7,3 @@ class Square:
     def __init__(self, size):
         """ initialize square with private attribute siize """
         self.__size = size
-
