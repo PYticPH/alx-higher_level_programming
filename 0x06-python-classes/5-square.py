@@ -10,7 +10,7 @@
   "size must be >= 0"
 - Public instance method def area(self) that returns the current
   square area
-- Public instance method def my_print(self) that prints to 
+- Public instance method def my_print(self) that prints to
   stdout the square with the character
   if size is equal to 0, print an empty line
 """
