@@ -13,7 +13,7 @@ class Square:
     """ clas square """
     def __init__(self, size=0):
         """ initialize private attribute size """
-        if type(size) != type(1):
+        if isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
