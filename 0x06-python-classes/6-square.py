@@ -16,9 +16,9 @@ position must be a tuple of 2 positive integers, otherwise raise a TypeError
 exception with the message position must be a tuple of 2 positive integers
 Instantiation with optional size and optional position:
 def __init__(self, size=0, position=(0, 0)):
-Public instance method: def area(self): that returns the current square area
-Public instance method: def my_print(self): that prints in stdout the square
-with the character #:
+Public instance method: def area(self): that returns the current
+square area Public instance method: def my_print(self):
+that prints in stdout the square with the character #:
 if size is equal to 0, print an empty line
 """
 
@@ -68,8 +68,7 @@ class Square:
     @position.setter
     def position(self, value):
         """ set the value of position """
-        if not isistance(
-                value, type((0, 0))) & position[0] < 0 & position[1] < 0:
+        if len(value) != 2 & value[0] < 0 & value[1] < 0:
             raise TypeError(
                     "position must be a tuple of 2 positive integers")
         else:
