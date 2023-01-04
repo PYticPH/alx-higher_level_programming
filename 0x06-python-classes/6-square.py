@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 """ class Square """
 
+
 class Square:
     """ clas square """
     def __init__(self, size=0, position=(0, 0)):
         """ initialize private attribute size """
         self.__size = size
-        self.__position = position
+        self.position = position
 
     def area(self):
         """ return the current square area """
-        return (self.__size * self.__size)
+        return (self.size * self.size)
 
     @property
     def size(self):
@@ -29,12 +30,12 @@ class Square:
 
     def my_print(self):
         """ print square with '#' character """
-        if self.__size:
-            if self.__position[1]:
-                print("{}".format('' * self.__position[1]))
-            for i in range(0, self.__size):
+        if self.size:
+            if self.position[1]:
+                print("{}".format('' * self.position[1]))
+            for i in range(0, self.size):
                 print("{}{}".format(
-                    ' ' * self.__position[0], '#' * self.__size))
+                    ' ' * self.position[0], '#' * self.size))
         else:
             print()
 
