@@ -6,8 +6,8 @@ class Square:
     """ clas square """
     def __init__(self, size=0, position=(0, 0)):
         """ initialize private attributes """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """ return the current square area """
@@ -30,8 +30,8 @@ class Square:
 
     def my_print(self):
         """ print square with '#' character """
-        if self.__position[1]:
-            print("{}".format('' * self.__position[1]))
+        for i in range(0, self.__position[1]):
+            print()
         if self.__size:
             for i in range(0, self.__size):
                 print("{}{}".format(
@@ -47,12 +47,12 @@ class Square:
     @position.setter
     def position(self, value):
         """ set the value of position """
-        if (type(value) is not tuple) or (value == None):
+        if (not isinstance(value, tuple)):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if len(value) != 2:
+        if (not len(value) == 2):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if (type(value[0]) is not int) or (type(value[1]) is not int):
-            raise TypeError("position must be a tuple of 2 positive in⁰110tegers")
-        if (value[0] < 0) or (value[1] < 0):
+        if (not isinstance(value[0], int)) | (not isinstance(value[1], int)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if (value[0] < 0) | (value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
