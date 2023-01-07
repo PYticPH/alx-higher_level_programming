@@ -6,8 +6,8 @@ class Square:
     """ clas square """
     def __init__(self, size=0, position=(0, 0)):
         """ initialize private attributes """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """ return the current square area """
