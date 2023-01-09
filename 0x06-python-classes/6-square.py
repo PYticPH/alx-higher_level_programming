@@ -30,9 +30,9 @@ class Square:
 
     def my_print(self):
         """ print square with '#' character """
-        for i in range(0, self.__position[1]):
-            print()
         if self.__size:
+            for i in range(0, self.__position[1]):
+                print()
             for i in range(0, self.__size):
                 print("{}{}".format(
                     ' ' * self.__position[0], '#' * self.__size))
