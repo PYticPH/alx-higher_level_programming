@@ -60,10 +60,11 @@ class Square:
     def __str__(self):
         """ print() representation """
         if self.__size:
-            lines = ['\n' for n in range(self.__position[1])]
-            s = ' ' * self.__position[0]
-            d = '#' * self.__size
-            pattern = ["{}{}".format(s, d) for n in range(self.__size)]
-            return ''.join(lines)+'\n'.join(pattern)
-        else:
-            return ('\n')
+            [print("") for x in range(self.__position[1])]
+            for i in range(0, self.__size):
+                s = ' ' * self.__position[0]
+                d = '#' * self.__size
+                [print(f"{s}{d}", end='')]
+                if i != self.__size - 1:
+                    print("")
+        return ("")
